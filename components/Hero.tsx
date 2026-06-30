@@ -1,76 +1,216 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import {
+  MapPin,
+  Users,
+  Waves,
+  ChevronDown,
+} from "lucide-react";
 
-export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+const images = [
+  "/images/hero.jpeg",
+  "/images/exterior view.jpeg",
+  "/images/pool.jpeg",
+  "/images/g.f. hall.jpeg",
+];
+
+export default function Hero() {
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 5000);
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => clearInterval(timer);
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-[#081C3A]/90 backdrop-blur-lg shadow-xl"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <section className="relative h-screen overflow-hidden">
 
-        {/* Logo */}
+      {images.map((img, index) => (
+        <Image
+          key={index}
+          src={img}
+          alt="Luxury Villa"
+          fill
+          priority
+          className={`object-cover absolute transition-opacity duration-[2000ms]
+          ${
+            current === index
+              ? "opacity-100"
+              : "opacity-0"
+          }`}
+        />
+      ))}
 
-        <a
-          href="/"
-          className="text-3xl font-bold tracking-wide text-yellow-400"
-        >
-          ZORIELLE
-        </a>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#081C3A]/90 via-black/60 to-black/70" />
 
-        {/* Menu */}
+      <div className="relative z-20 h-full flex items-center pt-24 md:pt-0">
 
-        <nav className="hidden md:flex items-center gap-10 text-white">
+        <div className="max-w-7xl mx-auto px-6 w-full">
 
-          <a href="#about" className="hover:text-yellow-400 transition">
-            About
-          </a>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="uppercase tracking-[8px] text-yellow-400 mb-5"
+          >
+            Managed by Zorielle Hospitality
+          </motion.p>
 
-          <a href="#amenities" className="hover:text-yellow-400 transition">
-            Amenities
-          </a>
+          <motion.h1
+            initial={{ y: 60, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="text-5xl md:text-8xl font-bold leading-tight text-white"
+          >
+            Luxury Pool Villa
+            <br />
+            in Udaipur
+          </motion.h1>
 
-          <a href="#rooms" className="hover:text-yellow-400 transition">
-            Villa
-          </a>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: .5 }}
+            className="mt-8 max-w-2xl text-gray-300 text-lg"
+          >
+            Experience complete privacy,
+            premium interiors, private pool,
+            mountain views and unforgettable
+            luxury stays.
+          </motion.p>
 
-          <a href="#gallery" className="hover:text-yellow-400 transition">
-            Gallery
-          </a>
+          <div className="flex flex-wrap gap-4 mt-10">
 
-          <a href="#contact" className="hover:text-yellow-400 transition">
-            Contact
-          </a>
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-5 py-3 flex items-center gap-2">
 
-        </nav>
+              <MapPin
+                size={18}
+                className="text-yellow-400"
+              />
 
-        {/* Button */}
+              <span>Udaipur</span>
 
-        <a
-          href="https://wa.me/918619985400"
-          target="_blank"
-          className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-7 py-3 rounded-full transition"
-        >
-          Book Now
-        </a>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-5 py-3 flex items-center gap-2">
+
+              <Users
+                size={18}
+                className="text-yellow-400"
+              />
+
+              <span>6–8 Guests</span>
+
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-5 py-3 flex items-center gap-2">
+
+              <Waves
+                size={18}
+                className="text-yellow-400"
+              />
+
+              <span>Private Pool</span>
+
+            </div>
+
+          </div>          <div className="mt-12 flex flex-wrap gap-5">
+
+            <a
+              href="https://wa.me/918619985400"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-full font-bold transition"
+            >
+              Book Entire Villa
+            </a>
+
+            <a
+              href="#gallery"
+              className="border border-white px-8 py-4 rounded-full text-white hover:bg-white hover:text-black transition"
+            >
+              Explore Gallery
+            </a>
+
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">
+
+            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
+
+              <p className="text-gray-300">
+                Weekdays
+              </p>
+
+              <h2 className="text-4xl font-bold text-yellow-400 mt-2">
+                ₹11,999
+              </h2>
+
+              <p className="text-gray-400 mt-2">
+                Entire Villa / Night
+              </p>
+
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
+
+              <p className="text-gray-300">
+                Weekends
+              </p>
+
+              <h2 className="text-4xl font-bold text-yellow-400 mt-2">
+                ₹15,999
+              </h2>
+
+              <p className="text-gray-400 mt-2">
+                Entire Villa / Night
+              </p>
+
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
+
+              <p className="text-gray-300">
+                Festive Dates
+              </p>
+
+              <h2 className="text-3xl font-bold text-yellow-400 mt-2">
+                On Request
+              </h2>
+
+              <p className="text-gray-400 mt-2">
+                Contact for Best Price
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
-    </header>
+
+      <motion.div
+        initial={{ y: -10 }}
+        animate={{ y: 10 }}
+        transition={{
+          repeat: Infinity,
+          repeatType: "reverse",
+          duration: 1,
+        }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+      >
+        <ChevronDown
+          size={40}
+          className="text-yellow-400"
+        />
+      </motion.div>
+
+    </section>
   );
 }

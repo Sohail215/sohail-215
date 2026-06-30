@@ -1,28 +1,30 @@
 import type { Metadata } from "next";
-import { Poppins, Cormorant_Garamond } from "next/font/google";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
+  variable: "--font-inter",
+  display: "swap",
 });
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-cormorant",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Zorielle Luxury Villa | Udaipur",
+  title: "Zorielle Luxury Villa | Luxury Pool Villa in Udaipur",
   description:
-    "Experience luxury, comfort and privacy at Zorielle Luxury Villa, Udaipur. Private pool villa with premium hospitality.",
+    "Experience a premium luxury pool villa in Udaipur with private pool, mountain views, elegant interiors and unforgettable stays.",
   keywords: [
     "Luxury Villa Udaipur",
-    "Private Pool Villa",
+    "Pool Villa Udaipur",
+    "Private Villa",
+    "Zorielle Villa",
     "Luxury Stay Rajasthan",
-    "Zorielle Hospitality",
   ],
   authors: [{ name: "Zorielle Hospitality" }],
 };
@@ -35,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${cormorant.variable} antialiased`}
+        className={`${inter.variable} ${cormorant.variable} bg-[#081C3A] text-white antialiased`}
       >
         {children}
       </body>
