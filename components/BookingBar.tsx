@@ -1,100 +1,35 @@
-"use client";
-
-import { CalendarDays, Users, MessageCircle } from "lucide-react";
-
 export default function BookingBar() {
   return (
-    <section className="bg-gradient-to-r from-[#D4AF37] via-[#E6C15A] to-[#D4AF37] py-8 shadow-2xl">
+    <section className="bg-gradient-to-r from-[#081C3A] to-[#10284D] py-20">
 
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 p-8">
+        <div className="rounded-3xl border border-yellow-500/20 bg-white/5 backdrop-blur-xl p-10 flex flex-col lg:flex-row items-center justify-between gap-8">
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
+          <div>
 
-            {/* Left */}
+            <p className="uppercase tracking-[6px] text-yellow-400 mb-3">
+              Ready to Book?
+            </p>
 
-            <div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              Experience Luxury Like Never Before
+            </h2>
 
-              <p className="uppercase tracking-[5px] text-black font-bold">
-                Limited Time Offer
-              </p>
-
-              <h2 className="text-4xl font-bold text-[#081C3A] mt-2">
-                Book Your Luxury Stay
-              </h2>
-
-              <p className="text-[#081C3A] mt-3">
-                Private Pool • 3 Bedrooms • Mountain View
-              </p>
-
-            </div>
-
-            {/* Check In */}
-
-            <div className="bg-white rounded-2xl p-5 flex items-center gap-4">
-
-              <CalendarDays
-                className="text-yellow-600"
-                size={32}
-              />
-
-              <div>
-
-                <p className="text-gray-500 text-sm">
-                  Check In
-                </p>
-
-                <h3 className="font-bold text-black">
-                  Flexible
-                </h3>
-
-              </div>
-
-            </div>
-
-            {/* Guests */}
-
-            <div className="bg-white rounded-2xl p-5 flex items-center gap-4">
-
-              <Users
-                className="text-yellow-600"
-                size={32}
-              />
-
-              <div>
-
-                <p className="text-gray-500 text-sm">
-                  Guests
-                </p>
-
-                <h3 className="font-bold text-black">
-                  1 – 8 Guests
-                </h3>
-
-              </div>
-
-            </div>
-
-            {/* Button */}
-
-            <div className="flex justify-center lg:justify-end">
-
-              <a
-                href="https://wa.me/918619985400"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 bg-[#081C3A] hover:bg-black text-white px-10 py-5 rounded-full font-bold transition-all duration-300 hover:scale-105"
-              >
-                <MessageCircle size={22} />
-
-                Book on WhatsApp
-
-              </a>
-
-            </div>
+            <p className="text-gray-300 mt-5 text-lg">
+              Private Pool • 3 Luxury Bedrooms • Mountain View • Up to 8 Guests
+            </p>
 
           </div>
+
+          <a
+            href="https://wa.me/918619985400"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-10 py-5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-yellow-500/30"
+          >
+            Book on WhatsApp
+          </a>
 
         </div>
 

@@ -32,6 +32,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden">
 
+      {/* Background Slider */}
+
       {images.map((img, index) => (
         <Image
           key={index}
@@ -45,42 +47,60 @@ export default function Hero() {
         />
       ))}
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#081C3A]/90 via-black/55 to-black/60" />
+      {/* Dark Overlay */}
+
+      <div className="absolute inset-0 bg-gradient-to-r from-[#06152d]/90 via-[#081C3A]/65 to-black/60" />
 
       <div className="relative z-20 flex items-center min-h-screen">
 
-        <div className="max-w-7xl mx-auto w-full px-6">
+        <div className="max-w-7xl mx-auto w-full px-6 lg:px-10">
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: .8 }}
+            transition={{ duration: 0.8 }}
           >
 
-            <div className="flex items-center gap-2 text-yellow-400 mb-6">
+            {/* Small Heading */}
+
+            <div className="flex items-center gap-2 text-yellow-400 mb-5">
 
               <Star size={18} fill="#D4AF37" />
 
-              <span className="uppercase tracking-[6px] text-sm">
+              <span className="uppercase tracking-[5px] text-xs sm:text-sm">
                 Managed by Zorielle Hospitality
               </span>
 
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-white">
+            {/* Main Heading */}
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight text-white max-w-4xl">
+
               Luxury Pool Villa
+
               <br />
+
               in Udaipur
+
             </h1>
 
-            <p className="mt-6 max-w-2xl text-gray-300 text-base md:text-lg leading-8">
-              Discover elegance, privacy and unforgettable luxury
-              experiences with your family and friends.
+            {/* Description */}
+
+            <p className="mt-6 max-w-2xl text-base md:text-lg leading-8 text-gray-200">
+
+              Discover elegance, privacy and unforgettable luxury experiences
+              with your family and friends. Relax in a premium private villa
+              featuring a swimming pool, breathtaking Aravalli views and
+              world-class hospitality.
+
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-10">
+            {/* Feature Badges */}
 
-              <div className="glass rounded-full px-5 py-3 flex items-center gap-2">
+            <div className="flex flex-wrap gap-3 mt-8">
+
+              <div className="glass rounded-full px-4 py-2 flex items-center gap-2">
 
                 <MapPin size={18} className="text-yellow-400" />
 
@@ -88,7 +108,7 @@ export default function Hero() {
 
               </div>
 
-              <div className="glass rounded-full px-5 py-3 flex items-center gap-2">
+              <div className="glass rounded-full px-4 py-2 flex items-center gap-2">
 
                 <Users size={18} className="text-yellow-400" />
 
@@ -96,7 +116,7 @@ export default function Hero() {
 
               </div>
 
-              <div className="glass rounded-full px-5 py-3 flex items-center gap-2">
+              <div className="glass rounded-full px-4 py-2 flex items-center gap-2">
 
                 <Waves size={18} className="text-yellow-400" />
 
@@ -104,74 +124,48 @@ export default function Hero() {
 
               </div>
 
-            </div>            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            </div>
+
+            {/* Buttons */}
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
 
               <a
                 href="https://wa.me/918619985400"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 py-4 rounded-full transition duration-300 text-center"
+                className="inline-flex items-center justify-center rounded-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 py-4 transition-all duration-300 hover:scale-105"
               >
                 Book Entire Villa
               </a>
 
               <a
                 href="#gallery"
-                className="border border-white hover:bg-white hover:text-black px-8 py-4 rounded-full transition duration-300 text-center"
+                className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 backdrop-blur-md px-8 py-4 hover:bg-white hover:text-black transition-all duration-300"
               >
                 Explore Gallery
               </a>
 
             </div>
 
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-5xl">
+            {/* Trust Badges */}
 
-              <div className="glass rounded-2xl p-4">
+            <div className="mt-8 flex flex-wrap gap-3">
 
-                <p className="text-gray-300">
-                  Weekdays
-                </p>
-
-                <h2 className="text-4xl font-bold text-yellow-400 mt-2">
-                  ₹11,999
-                </h2>
-
-                <p className="text-gray-400 mt-2">
-                  Entire Villa / Night
-                </p>
-
+              <div className="glass rounded-full px-4 py-2 text-sm">
+                ⭐ Rated Luxury Villa
               </div>
 
-              <div className="glass rounded-2xl p-4">
-
-                <p className="text-gray-300">
-                  Weekends
-                </p>
-
-                <h2 className="text-4xl font-bold text-yellow-400 mt-2">
-                  ₹15,999
-                </h2>
-
-                <p className="text-gray-400 mt-2">
-                  Entire Villa / Night
-                </p>
-
+              <div className="glass rounded-full px-4 py-2 text-sm">
+                🏊 Private Pool
               </div>
 
-              <div className="glass rounded-2xl p-4">
+              <div className="glass rounded-full px-4 py-2 text-sm">
+                👨‍👩‍👧 Family Friendly
+              </div>
 
-                <p className="text-gray-300">
-                  Festive Dates
-                </p>
-
-                <h2 className="text-3xl font-bold text-yellow-400 mt-2">
-                  On Request
-                </h2>
-
-                <p className="text-gray-400 mt-2">
-                  Contact for Best Price
-                </p>
-
+              <div className="glass rounded-full px-4 py-2 text-sm">
+                🔒 Safe & Secure
               </div>
 
             </div>
@@ -180,11 +174,15 @@ export default function Hero() {
 
         </div>
 
-      </div>      <motion.div
+      </div>
+
+      {/* Scroll Down */}
+
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          y: [0, 12, 0],
+          y: [0, 10, 0],
         }}
         transition={{
           duration: 1.8,
@@ -192,11 +190,15 @@ export default function Hero() {
         }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
       >
+
         <ChevronDown
-          size={40}
+          size={38}
           className="text-yellow-400"
         />
+
       </motion.div>
+
+      {/* Bottom Gradient */}
 
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#081C3A] to-transparent" />
 

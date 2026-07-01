@@ -5,23 +5,20 @@ import {
   Phone,
   Mail,
   MapPin,
+  Instagram,
+  Facebook,
   ArrowUpRight,
 } from "lucide-react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaWhatsapp,
-} from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#081C3A] border-t border-yellow-500/20">
+    <footer className="bg-[#06152d] border-t border-yellow-500/20">
 
       <div className="max-w-7xl mx-auto px-6 py-20">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
 
-          {/* Logo */}
+          {/* Brand */}
 
           <div>
 
@@ -29,15 +26,15 @@ export default function Footer() {
               ZORIELLE
             </h2>
 
-            <p className="text-gray-300 leading-8 mt-5">
-              Experience luxury, comfort and complete privacy
-              in our premium pool villa located in Udaipur.
-              Perfect for families, couples and group stays.
+            <p className="text-gray-300 mt-6 leading-8">
+              Luxury Private Pool Villa in Greater Kailash,
+              Udaipur. Experience elegance, privacy and
+              unforgettable stays with Zorielle Hospitality.
             </p>
 
           </div>
 
-          {/* Quick Links */}
+          {/* Links */}
 
           <div>
 
@@ -47,29 +44,11 @@ export default function Footer() {
 
             <div className="flex flex-col gap-4">
 
-              <Link href="#about" className="hover:text-yellow-400 transition">
-                About
-              </Link>
-
-              <Link href="#amenities" className="hover:text-yellow-400 transition">
-                Amenities
-              </Link>
-
-              <Link href="#rooms" className="hover:text-yellow-400 transition">
-                Villa
-              </Link>
-
-              <Link href="#gallery" className="hover:text-yellow-400 transition">
-                Gallery
-              </Link>
-
-              <Link href="#booking" className="hover:text-yellow-400 transition">
-                Booking
-              </Link>
-
-              <Link href="#contact" className="hover:text-yellow-400 transition">
-                Contact
-              </Link>
+              <Link href="#about">About</Link>
+              <Link href="#amenities">Amenities</Link>
+              <Link href="#rooms">Villa</Link>
+              <Link href="#gallery">Gallery</Link>
+              <Link href="#contact">Contact</Link>
 
             </div>
 
@@ -83,13 +62,13 @@ export default function Footer() {
               Contact
             </h3>
 
-            <div className="space-y-5 text-gray-300">
+            <div className="space-y-5">
 
               <a
                 href="tel:+918619985400"
                 className="flex items-center gap-3 hover:text-yellow-400 transition"
               >
-                <Phone size={18} />
+                <Phone size={20}/>
                 +91 86199 85400
               </a>
 
@@ -97,17 +76,20 @@ export default function Footer() {
                 href="mailto:info@zorielle.com"
                 className="flex items-center gap-3 hover:text-yellow-400 transition"
               >
-                <Mail size={18} />
+                <Mail size={20}/>
                 info@zorielle.com
               </a>
 
               <div className="flex items-start gap-3">
-                <MapPin size={18} className="mt-1" />
+
+                <MapPin size={20}/>
+
                 <span>
+                  Greater Kailash,
                   Udaipur,
-                  Rajasthan,
-                  India
+                  Rajasthan 313011
                 </span>
+
               </div>
 
             </div>
@@ -119,36 +101,23 @@ export default function Footer() {
           <div>
 
             <h3 className="text-2xl font-semibold mb-6">
-              Connect
+              Follow Us
             </h3>
 
             <div className="flex gap-4">
 
               <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#10284D] p-4 rounded-full hover:bg-yellow-500 hover:text-black transition"
+                href="#"
+                className="bg-[#10284D] hover:bg-yellow-500 hover:text-black p-4 rounded-full transition"
               >
-                <FaInstagram size={20} />
+                <Instagram size={22}/>
               </a>
 
               <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#10284D] p-4 rounded-full hover:bg-yellow-500 hover:text-black transition"
+                href="#"
+                className="bg-[#10284D] hover:bg-yellow-500 hover:text-black p-4 rounded-full transition"
               >
-                <FaFacebookF size={20} />
-              </a>
-
-              <a
-                href="https://wa.me/918619985400"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#10284D] p-4 rounded-full hover:bg-green-500 hover:text-white transition"
-              >
-                <FaWhatsapp size={20} />
+                <Facebook size={22}/>
               </a>
 
             </div>
@@ -157,10 +126,10 @@ export default function Footer() {
               href="https://wa.me/918619985400"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-8 bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-6 py-3 rounded-full transition"
+              className="inline-flex items-center gap-2 mt-8 bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3 rounded-full font-bold transition"
             >
               Book Now
-              <ArrowUpRight size={18} />
+              <ArrowUpRight size={18}/>
             </a>
 
           </div>
@@ -169,12 +138,12 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
 
-          <p className="text-gray-400 text-center md:text-left">
-            © 2026 Zorielle Luxury Villa. All Rights Reserved.
+          <p className="text-gray-400 text-center">
+            © 2026 Zorielle Hospitality. All Rights Reserved.
           </p>
 
           <p className="text-gray-500 text-sm">
-            Managed by Zorielle Hospitality
+            Designed with ❤️ for Luxury Experiences
           </p>
 
         </div>
