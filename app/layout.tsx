@@ -16,19 +16,62 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Zorielle Luxury Villa | Luxury Pool Villa in Udaipur",
+  metadataBase: new URL("https://sohail-215.vercel.app"),
+
+  title: {
+    default: "Zorielle Luxury Villa | Luxury Pool Villa in Udaipur",
+    template: "%s | Zorielle Luxury Villa",
+  },
+
   description:
-    "Experience a premium luxury pool villa in Udaipur with private pool, mountain views, elegant interiors and unforgettable stays.",
+    "Experience luxury stays at Zorielle Luxury Villa in Udaipur with a private swimming pool, mountain views, premium interiors, and unforgettable hospitality.",
+
   keywords: [
     "Luxury Villa Udaipur",
     "Pool Villa Udaipur",
-    "Private Villa",
-    "Zorielle Villa",
-    "Luxury Stay Rajasthan",
+    "Private Villa Rajasthan",
+    "Zorielle Luxury Villa",
+    "Villa Booking",
+    "Luxury Stay Udaipur",
   ],
-  authors: [{ name: "Zorielle Hospitality" }],
-};
 
+  authors: [
+    {
+      name: "Zorielle Hospitality",
+    },
+  ],
+
+  creator: "Zorielle Hospitality",
+
+  openGraph: {
+    title: "Zorielle Luxury Villa",
+    description:
+      "Luxury Private Pool Villa in Udaipur.",
+    url: "https://sohail-215.vercel.app",
+    siteName: "Zorielle Luxury Villa",
+    images: [
+      {
+        url: "/images/hero.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Zorielle Luxury Villa",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Zorielle Luxury Villa",
+    description: "Luxury Pool Villa in Udaipur",
+    images: ["/images/hero.jpeg"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 export default function RootLayout({
   children,
 }: Readonly<{
