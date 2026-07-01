@@ -51,18 +51,25 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#081C3A]/90 backdrop-blur-xl border-b border-yellow-500/20"
+          ? "bg-[#081C3A]/95 backdrop-blur-xl border-b border-yellow-500/20 shadow-xl"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-        <a
-          href="/"
-          className="text-3xl font-bold tracking-wider text-yellow-400"
-        >
-          ZORIELLE
+        {/* Logo */}
+
+        <a href="/" className="leading-tight">
+          <h1 className="text-2xl md:text-3xl font-bold tracking-wider text-yellow-400">
+            ZORIELLE
+          </h1>
+
+          <p className="text-[10px] md:text-xs uppercase tracking-[4px] text-white/80">
+            Villa Udaipur
+          </p>
         </a>
+
+        {/* Desktop Menu */}
 
         <nav className="hidden lg:flex items-center gap-10">
 
@@ -71,7 +78,7 @@ export default function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className={`transition font-medium ${
+              className={`transition-all duration-300 font-medium ${
                 active === item.href
                   ? "text-yellow-400"
                   : "text-white hover:text-yellow-400"
@@ -84,14 +91,18 @@ export default function Navbar() {
 
         </nav>
 
+        {/* Desktop Button */}
+
         <a
           href="https://wa.me/918619985400"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden lg:inline-block bg-yellow-500 hover:bg-yellow-400 text-black px-7 py-3 rounded-full font-bold transition"
+          className="hidden lg:inline-flex items-center justify-center bg-yellow-500 hover:bg-yellow-400 text-black px-7 py-3 rounded-full font-bold transition-all duration-300 hover:scale-105"
         >
           Book Now
         </a>
+
+        {/* Mobile Menu Button */}
 
         <button
           onClick={() => setOpen(!open)}
@@ -102,8 +113,11 @@ export default function Navbar() {
 
       </div>
 
+      {/* Mobile Menu */}
+
       {open && (
-        <div className="lg:hidden bg-[#081C3A] border-t border-yellow-500/20">
+
+        <div className="lg:hidden bg-[#081C3A] border-t border-yellow-500/20 backdrop-blur-xl">
 
           <div className="flex flex-col p-6 gap-5">
 
@@ -113,7 +127,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className={`${
+                className={`text-lg ${
                   active === item.href
                     ? "text-yellow-400"
                     : "text-white"
@@ -126,14 +140,29 @@ export default function Navbar() {
 
             <a
               href="https://wa.me/918619985400"
-              className="bg-yellow-500 text-center py-3 rounded-full text-black font-bold"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 bg-yellow-500 hover:bg-yellow-400 text-center py-3 rounded-full text-black font-bold transition"
             >
               Book Now
             </a>
 
+            <div className="pt-4 border-t border-white/10 text-center">
+
+              <h3 className="text-yellow-400 font-semibold">
+                Zorielle Villa Udaipur
+              </h3>
+
+              <p className="text-xs text-gray-400 mt-1">
+                Managed by Zorielle Hospitality
+              </p>
+
+            </div>
+
           </div>
 
         </div>
+
       )}
     </header>
   );

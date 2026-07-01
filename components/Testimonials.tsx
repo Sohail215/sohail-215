@@ -8,19 +8,19 @@ const reviews = [
     name: "Rahul Sharma",
     city: "Jaipur",
     review:
-      "Amazing villa with a private pool. The rooms were clean, spacious and the hospitality was excellent.",
+      "Our stay at Zorielle Villa Udaipur was absolutely wonderful. The private swimming pool, luxurious bedrooms, and peaceful surroundings made our family vacation truly memorable. The hospitality was exceptional.",
   },
   {
     name: "Priya Mehta",
     city: "Ahmedabad",
     review:
-      "Beautiful interiors and peaceful surroundings. Perfect place for family vacations.",
+      "Beautiful villa with elegant interiors and stunning Aravalli views. Everything was clean, well-maintained, and exactly as shown. Highly recommended for families and friends.",
   },
   {
     name: "Aman Verma",
-    city: "Delhi",
+    city: "New Delhi",
     review:
-      "Highly recommended. Luxury experience, mountain views and a fantastic stay.",
+      "One of the best private villas in Udaipur. Spacious rooms, complete privacy, premium amenities, and excellent support from the Zorielle Hospitality team. We will definitely visit again.",
   },
 ];
 
@@ -37,10 +37,14 @@ export default function Testimonials() {
         </p>
 
         <h2 className="text-4xl md:text-6xl font-bold text-center mt-4">
-          What Our Guests Say
+          Loved by Our Guests
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
+        <p className="text-center text-gray-300 max-w-3xl mx-auto mt-5 mb-16">
+          Discover why guests choose <span className="text-yellow-400 font-semibold">Zorielle Villa Udaipur</span> for unforgettable holidays, family vacations, weekend getaways, and premium private villa experiences.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-8">
 
           {reviews.map((review, index) => (
             <motion.div

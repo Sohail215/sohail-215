@@ -19,20 +19,24 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sohail-215.vercel.app"),
 
   title: {
-    default: "Zorielle Luxury Villa | Luxury Pool Villa in Udaipur",
-    template: "%s | Zorielle Luxury Villa",
+    default: "Zorielle Villa Udaipur | Luxury Private Pool Villa",
+    template: "%s | Zorielle Villa Udaipur",
   },
 
   description:
-    "Experience luxury stays at Zorielle Luxury Villa in Udaipur with a private swimming pool, mountain views, premium interiors, and unforgettable hospitality.",
+    "Experience a luxurious stay at Zorielle Villa Udaipur featuring a private swimming pool, elegant interiors, breathtaking Aravalli views, and premium hospitality.",
 
   keywords: [
+    "Zorielle Villa Udaipur",
     "Luxury Villa Udaipur",
-    "Pool Villa Udaipur",
-    "Private Villa Rajasthan",
-    "Zorielle Luxury Villa",
-    "Villa Booking",
+    "Private Pool Villa Udaipur",
     "Luxury Stay Udaipur",
+    "Villa Booking Udaipur",
+    "Private Villa Rajasthan",
+    "Holiday Villa Udaipur",
+    "Weekend Stay Udaipur",
+    "Luxury Homestay Udaipur",
+    "Family Villa Udaipur",
   ],
 
   authors: [
@@ -43,35 +47,58 @@ export const metadata: Metadata = {
 
   creator: "Zorielle Hospitality",
 
+  publisher: "Zorielle Hospitality",
+
+  applicationName: "Zorielle Villa Udaipur",
+
+  category: "Luxury Villa",
+
   openGraph: {
-    title: "Zorielle Luxury Villa",
+    title: "Zorielle Villa Udaipur",
     description:
-      "Luxury Private Pool Villa in Udaipur.",
+      "Luxury Private Pool Villa in Udaipur with elegant interiors, private swimming pool and premium hospitality.",
     url: "https://sohail-215.vercel.app",
-    siteName: "Zorielle Luxury Villa",
+    siteName: "Zorielle Villa Udaipur",
+    locale: "en_IN",
+    type: "website",
+
     images: [
       {
         url: "/images/hero.jpeg",
         width: 1200,
         height: 630,
-        alt: "Zorielle Luxury Villa",
+        alt: "Zorielle Villa Udaipur",
       },
     ],
-    locale: "en_IN",
-    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Zorielle Luxury Villa",
-    description: "Luxury Pool Villa in Udaipur",
+    title: "Zorielle Villa Udaipur",
+    description:
+      "Luxury Private Pool Villa in Udaipur",
     images: ["/images/hero.jpeg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
+    },
   },
 
   icons: {
     icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{

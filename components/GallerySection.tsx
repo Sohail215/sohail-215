@@ -24,7 +24,7 @@ const images = [
   "/images/room10.2.jpeg",
   "/images/room10.3 .jpeg",
   "/images/room10.4.jpeg",
-"/images/room10.5.jpeg",
+  "/images/room10.5.jpeg",
 ];
 
 export default function GallerySection() {
@@ -38,16 +38,18 @@ export default function GallerySection() {
       <div className="max-w-7xl mx-auto px-6">
 
         <p className="uppercase tracking-[6px] text-yellow-400 text-center">
-          Gallery
+          Villa Gallery
         </p>
 
         <h2 className="text-5xl font-bold text-center mt-4">
-          Explore Zorielle
+          Explore Zorielle Villa Udaipur
         </h2>
 
-        <p className="text-gray-300 text-center mt-5 max-w-2xl mx-auto">
-          Discover every corner of our luxury private pool villa through our
-          beautiful gallery.
+        <p className="text-gray-300 text-center mt-5 max-w-3xl mx-auto">
+          Discover the elegance of Zorielle Villa Udaipur through our gallery,
+          showcasing luxurious bedrooms, spacious living areas, a private
+          swimming pool, scenic surroundings, and thoughtfully designed spaces
+          for an unforgettable stay.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
@@ -61,7 +63,7 @@ export default function GallerySection() {
               viewport={{ once: true }}
               transition={{
                 duration: 0.5,
-                delay: index * 0.1,
+                delay: index * 0.08,
               }}
               onClick={() => setSelectedImage(image)}
               className="relative h-72 rounded-3xl overflow-hidden cursor-pointer group border border-white/10 hover:border-yellow-400"
@@ -69,12 +71,12 @@ export default function GallerySection() {
 
               <Image
                 src={image}
-                alt={`Gallery ${index + 1}`}
+                alt={`Zorielle Villa Udaipur Gallery ${index + 1}`}
                 fill
                 className="object-cover transition duration-700 group-hover:scale-110"
               />
 
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition" />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition duration-300" />
 
             </motion.div>
 
@@ -88,9 +90,7 @@ export default function GallerySection() {
 
       {selectedImage && (
 
-        <div
-          className="fixed inset-0 z-[999] bg-black/95 flex items-center justify-center p-6"
-        >
+        <div className="fixed inset-0 z-[999] bg-black/95 flex items-center justify-center p-6">
 
           <button
             onClick={() => setSelectedImage(null)}
@@ -103,7 +103,7 @@ export default function GallerySection() {
 
             <Image
               src={selectedImage}
-              alt="Gallery"
+              alt="Zorielle Villa Udaipur"
               fill
               className="object-contain rounded-2xl"
             />

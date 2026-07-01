@@ -13,12 +13,15 @@ export default function BookingBar() {
             </p>
 
             <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Experience Luxury Like Never Before
+              Stay at Zorielle Villa Udaipur
             </h2>
 
             <p className="text-gray-300 mt-5 text-lg leading-8">
-              Enjoy a private luxury villa with a swimming pool, elegant
-              interiors, breathtaking Aravalli views and premium hospitality.
+              Escape to Zorielle Villa Udaipur and enjoy a luxurious private
+              villa experience featuring elegant interiors, a private swimming
+              pool, scenic Aravalli views, spacious bedrooms, and warm
+              hospitality by Zorielle Hospitality. Perfect for family vacations,
+              celebrations, weekend getaways, and peaceful retreats.
             </p>
 
           </div>
@@ -29,7 +32,7 @@ export default function BookingBar() {
             rel="noopener noreferrer"
             className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-10 py-5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-yellow-500/30"
           >
-            Check Availability
+            Book Zorielle Villa
           </a>
 
         </div>

@@ -7,7 +7,7 @@ import { CheckCircle } from "lucide-react";
 const features = [
   "Private Swimming Pool",
   "Luxury Bedrooms",
-  "Mountain View",
+  "Scenic Aravalli Views",
   "Free High-Speed WiFi",
   "Fully Equipped Kitchen",
   "24×7 Guest Support",
@@ -36,7 +36,7 @@ export default function About() {
 
               <Image
                 src="/images/exterior view.jpeg"
-                alt="Zorielle Luxury Villa"
+                alt="Zorielle Villa Udaipur"
                 fill
                 className="object-cover hover:scale-110 transition duration-700"
               />
@@ -50,7 +50,7 @@ export default function About() {
               </h3>
 
               <p className="font-semibold">
-                Luxury Experience
+                Premium Villa Experience
               </p>
 
             </div>
@@ -67,26 +67,33 @@ export default function About() {
           >
 
             <p className="uppercase tracking-[6px] text-yellow-400 font-semibold">
-              About Zorielle
+              About Zorielle Villa Udaipur
             </p>
 
             <h2 className="text-5xl md:text-6xl font-bold mt-4 leading-tight">
 
-              Where Luxury
+              Luxury Stay
               <br />
-              Feels Personal
+              With Timeless Comfort
 
             </h2>
 
             <p className="text-gray-300 mt-8 text-lg leading-8">
 
-              Welcome to <span className="text-yellow-400 font-semibold">Zorielle Luxury Villa</span>,
-              where comfort meets elegance.
+              Welcome to
+              <span className="text-yellow-400 font-semibold">
+                {" "}Zorielle Villa Udaipur
+              </span>,
+              a premium private villa managed by
+              <span className="text-yellow-400 font-semibold">
+                {" "}Zorielle Hospitality
+              </span>.
 
-              Experience premium hospitality, spacious luxury rooms,
-              a private swimming pool, breathtaking mountain views,
-              and unforgettable moments with your family and friends
-              in the heart of Udaipur.
+              Enjoy elegant interiors, spacious bedrooms, a private swimming pool,
+              breathtaking Aravalli views, and personalized hospitality.
+              Whether you're planning a family vacation, weekend getaway,
+              celebration, or corporate stay, every moment is designed to be
+              comfortable, peaceful, and memorable.
 
             </p>
 
@@ -123,7 +130,7 @@ export default function About() {
                 </h3>
 
                 <p className="text-gray-300 mt-2">
-                  Luxury Rooms
+                  Luxury Bedrooms
                 </p>
 
               </div>
@@ -158,7 +165,7 @@ export default function About() {
               href="#gallery"
               className="inline-block mt-12 bg-yellow-500 hover:bg-yellow-400 text-black px-10 py-4 rounded-full font-bold transition"
             >
-              Explore Villa
+              Explore Zorielle Villa
             </a>
 
           </motion.div>

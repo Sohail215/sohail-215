@@ -38,7 +38,7 @@ export default function Hero() {
         <Image
           key={index}
           src={img}
-          alt="Luxury Villa"
+          alt="Zorielle Villa Udaipur"
           fill
           priority
           className={`absolute object-cover transition-opacity duration-[1800ms] ${
@@ -61,8 +61,6 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
 
-            {/* Small Heading */}
-
             <div className="flex items-center gap-2 text-yellow-400 mb-5">
 
               <Star size={18} fill="#D4AF37" />
@@ -73,30 +71,29 @@ export default function Hero() {
 
             </div>
 
-            {/* Main Heading */}
-
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight text-white max-w-4xl">
 
-              Luxury Pool Villa
+              Zorielle Villa
 
               <br />
 
-              in Udaipur
+              Udaipur
 
             </h1>
 
-            {/* Description */}
-
             <p className="mt-6 max-w-2xl text-base md:text-lg leading-8 text-gray-200">
 
-              Discover elegance, privacy and unforgettable luxury experiences
-              with your family and friends. Relax in a premium private villa
-              featuring a swimming pool, breathtaking Aravalli views and
-              world-class hospitality.
+              Experience an exclusive stay at
+              <span className="text-yellow-400 font-semibold">
+                {" "}Zorielle Villa Udaipur
+              </span>,
+              featuring elegant interiors, a private swimming pool,
+              breathtaking Aravalli views, and warm hospitality by
+              Zorielle Hospitality. Whether you're planning a family
+              vacation, celebration, or weekend getaway, every stay
+              is designed to create unforgettable memories.
 
             </p>
-
-            {/* Feature Badges */}
 
             <div className="flex flex-wrap gap-3 mt-8">
 
@@ -104,7 +101,7 @@ export default function Hero() {
 
                 <MapPin size={18} className="text-yellow-400" />
 
-                <span>Udaipur</span>
+                <span>Udaipur, Rajasthan</span>
 
               </div>
 
@@ -120,13 +117,11 @@ export default function Hero() {
 
                 <Waves size={18} className="text-yellow-400" />
 
-                <span>Private Pool</span>
+                <span>Private Swimming Pool</span>
 
               </div>
 
-            </div>
-
-            {/* Buttons */}
+            </div>            {/* Buttons */}
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
 
@@ -136,7 +131,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 py-4 transition-all duration-300 hover:scale-105"
               >
-                Book Entire Villa
+                Book Zorielle Villa
               </a>
 
               <a
@@ -153,19 +148,19 @@ export default function Hero() {
             <div className="mt-8 flex flex-wrap gap-3">
 
               <div className="glass rounded-full px-4 py-2 text-sm">
-                ⭐ Rated Luxury Villa
+                ⭐ Premium Villa Experience
               </div>
 
               <div className="glass rounded-full px-4 py-2 text-sm">
-                🏊 Private Pool
+                🏊 Private Swimming Pool
               </div>
 
               <div className="glass rounded-full px-4 py-2 text-sm">
-                👨‍👩‍👧 Family Friendly
+                👨‍👩‍👧 Perfect for Families & Groups
               </div>
 
               <div className="glass rounded-full px-4 py-2 text-sm">
-                🔒 Safe & Secure
+                🔒 Safe & Secure Stay
               </div>
 
             </div>

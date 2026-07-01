@@ -17,19 +17,22 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6">
 
         <p className="uppercase tracking-[8px] text-yellow-400 text-center">
-          Contact Us
+          Contact Zorielle Villa Udaipur
         </p>
 
         <h2 className="text-4xl md:text-6xl font-bold text-center mt-4">
-          Let's Plan Your Stay
+          Plan Your Stay With Us
         </h2>
 
-        <p className="text-center text-gray-300 mt-5 max-w-2xl mx-auto mb-16">
-          Contact us anytime for bookings, availability,
-          pricing or any special requests.
+        <p className="text-center text-gray-300 mt-5 max-w-3xl mx-auto mb-16">
+          Our team is always ready to assist you with villa bookings,
+          availability, special requests, and any information you need before
+          your stay at <span className="text-yellow-400 font-semibold">Zorielle Villa Udaipur</span>.
         </p>
 
         <div className="grid lg:grid-cols-2 gap-10">
+
+          {/* Contact Card */}
 
           <div className="glass rounded-3xl p-10 border border-yellow-500/20 shadow-2xl">
 
@@ -67,10 +70,10 @@ export default function Contact() {
                   </h3>
 
                   <a
-                    href="mailto:info@zorielle.com"
+                    href="mailto:info@zoriellevilla.com"
                     className="text-gray-300 hover:text-yellow-400 transition"
                   >
-                    info@zorielle.com
+                    info@zoriellevilla.com
                   </a>
 
                 </div>
@@ -88,6 +91,7 @@ export default function Contact() {
                   </h3>
 
                   <p className="text-gray-300">
+                    Zorielle Villa Udaipur,
                     Udaipur, Rajasthan, India
                   </p>
 
@@ -102,7 +106,7 @@ export default function Contact() {
                 <div>
 
                   <h3 className="text-xl font-bold">
-                    Check In / Check Out
+                    Check-In / Check-Out
                   </h3>
 
                   <p className="text-gray-300">
@@ -126,21 +130,28 @@ export default function Contact() {
               className="mt-10 w-full flex items-center justify-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 rounded-xl transition"
             >
               <MessageCircle size={22} />
-              Book on WhatsApp
+              Book Zorielle Villa
             </a>
 
+            <p className="text-center text-gray-400 text-sm mt-6">
+              Managed by <span className="text-yellow-400">Zorielle Hospitality</span>
+            </p>
+
           </div>
+
+          {/* Google Map */}
 
           <div className="overflow-hidden rounded-3xl border border-yellow-500/20 shadow-2xl">
 
             <iframe
-  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d14505.068016934612!2d73.62262071370226!3d24.648936205059076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDM4JzM2LjUiTiA3M8KwMzcnNDQuNiJF!5e0!3m2!1sen!2sin!4v1782879388837!5m2!1sen!2sin"
-  width="100%"
-  height="100%"
-  loading="lazy"
-  referrerPolicy="strict-origin-when-cross-origin"
-  className="min-h-[550px]"
-/>
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d14505.068016934612!2d73.62262071370226!3d24.648936205059076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDM4JzM2LjUiTiA3M8KwMzcnNDQuNiJF!5e0!3m2!1sen!2sin!4v1782879388837!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              className="min-h-[550px]"
+            />
+
           </div>
 
         </div>

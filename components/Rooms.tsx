@@ -9,25 +9,25 @@ const rooms = [
     title: "Luxury Bedroom",
     image: "/images/room1.jpeg",
     description:
-      "Elegant bedroom with king-size bed, premium interiors and luxury comfort.",
+      "Beautifully designed bedroom with a king-size bed, elegant interiors, air conditioning, and premium comfort for a relaxing stay.",
     guests: "2 Guests",
-    feature: "King Bed",
+    feature: "King Size Bed",
   },
   {
     title: "Premium Bedroom",
     image: "/images/room2.jpeg",
     description:
-      "Modern bedroom with stylish interiors and relaxing atmosphere.",
+      "Modern luxury bedroom featuring stylish décor, comfortable bedding, and a peaceful atmosphere for a memorable experience.",
     guests: "2 Guests",
-    feature: "Luxury Interior",
+    feature: "Premium Interior",
   },
   {
-    title: "Private Pool Villa",
+    title: "Entire Private Villa",
     image: "/images/exterior view.jpeg",
     description:
-      "Enjoy the complete villa with private swimming pool and mountain views.",
+      "Book the entire Zorielle Villa Udaipur with exclusive access to the private swimming pool, spacious living areas, luxury bedrooms, and scenic Aravalli surroundings.",
     guests: "6–8 Guests",
-    feature: "Private Pool",
+    feature: "Private Villa",
   },
 ];
 
@@ -44,12 +44,13 @@ export default function Rooms() {
         </p>
 
         <h2 className="text-4xl md:text-6xl font-bold text-center mt-4">
-          Stay In Luxury
+          Stay at Zorielle Villa Udaipur
         </h2>
 
         <p className="text-center text-gray-300 max-w-3xl mx-auto mt-5 mb-16">
-          Spacious bedrooms, premium interiors and a private pool
-          designed for unforgettable luxury stays.
+          Discover elegant bedrooms, premium interiors, a private swimming
+          pool, and breathtaking surroundings designed for an unforgettable
+          luxury stay in Udaipur.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -104,7 +105,7 @@ export default function Rooms() {
 
                   <div className="flex items-center gap-2 text-yellow-400">
                     <Waves size={18} />
-                    <span>Pool Access</span>
+                    <span>Private Pool</span>
                   </div>
 
                 </div>
@@ -115,7 +116,7 @@ export default function Rooms() {
                   rel="noopener noreferrer"
                   className="mt-8 inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black px-7 py-3 rounded-full font-bold transition-all duration-300"
                 >
-                  Book Now
+                  Book Zorielle Villa
                   <ArrowRight size={18} />
                 </a>
 

@@ -17,6 +17,10 @@ import TrustSection from "@/components/TrustSection";
 import FAQ from "@/components/FAQ";
 import CallButton from "@/components/CallButton";
 import ScrollProgress from "@/components/ScrollProgress";
+import NearbyAttractions from "@/components/NearbyAttractions";
+import HouseRules from "@/components/HouseRules";
+import WhyBookDirect from "@/components/WhyBookDirect";
+import CancellationPolicy from "@/components/CancellationPolicy";
 
 export default function Home() {
   return (
@@ -44,7 +48,15 @@ export default function Home() {
 
       <GallerySection />
 
+      <NearbyAttractions />
+
       <BookingForm />
+
+      <HouseRules />
+
+      <WhyBookDirect />
+
+      <CancellationPolicy />
 
       <Testimonials />
 

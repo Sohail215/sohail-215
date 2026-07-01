@@ -26,15 +26,26 @@ export default function Footer() {
               ZORIELLE
             </h2>
 
+            <p className="text-yellow-400 tracking-[3px] uppercase text-sm mt-1">
+              Villa Udaipur
+            </p>
+
             <p className="text-gray-300 mt-6 leading-8">
-              Luxury Private Pool Villa in Greater Kailash,
-              Udaipur. Experience elegance, privacy and
-              unforgettable stays with Zorielle Hospitality.
+              <span className="text-white font-semibold">
+                Zorielle Villa Udaipur
+              </span>{" "}
+              is a premium private pool villa managed by
+              <span className="text-yellow-400">
+                {" "}Zorielle Hospitality
+              </span>.
+              Experience elegant interiors, luxurious bedrooms,
+              breathtaking Aravalli views, complete privacy, and
+              unforgettable stays in the heart of Udaipur.
             </p>
 
           </div>
 
-          {/* Links */}
+          {/* Quick Links */}
 
           <div>
 
@@ -44,11 +55,25 @@ export default function Footer() {
 
             <div className="flex flex-col gap-4">
 
-              <Link href="#about">About</Link>
-              <Link href="#amenities">Amenities</Link>
-              <Link href="#rooms">Villa</Link>
-              <Link href="#gallery">Gallery</Link>
-              <Link href="#contact">Contact</Link>
+              <Link href="#about" className="hover:text-yellow-400 transition">
+                About
+              </Link>
+
+              <Link href="#amenities" className="hover:text-yellow-400 transition">
+                Amenities
+              </Link>
+
+              <Link href="#rooms" className="hover:text-yellow-400 transition">
+                Villa
+              </Link>
+
+              <Link href="#gallery" className="hover:text-yellow-400 transition">
+                Gallery
+              </Link>
+
+              <Link href="#contact" className="hover:text-yellow-400 transition">
+                Contact
+              </Link>
 
             </div>
 
@@ -68,7 +93,7 @@ export default function Footer() {
                 href="tel:+918619985400"
                 className="flex items-center gap-3 hover:text-yellow-400 transition"
               >
-                <Phone size={20}/>
+                <Phone size={20} />
                 +91 86199 85400
               </a>
 
@@ -76,18 +101,20 @@ export default function Footer() {
                 href="mailto:info@zorielle.com"
                 className="flex items-center gap-3 hover:text-yellow-400 transition"
               >
-                <Mail size={20}/>
+                <Mail size={20} />
                 info@zorielle.com
               </a>
 
               <div className="flex items-start gap-3">
 
-                <MapPin size={20}/>
+                <MapPin size={20} />
 
                 <span>
-                  Greater Kailash,
-                  Udaipur,
-                  Rajasthan 313011
+                  Zorielle Villa Udaipur
+                  <br />
+                  Greater Kailash
+                  <br />
+                  Udaipur, Rajasthan 313011
                 </span>
 
               </div>
@@ -110,14 +137,14 @@ export default function Footer() {
                 href="#"
                 className="bg-[#10284D] hover:bg-yellow-500 hover:text-black p-4 rounded-full transition"
               >
-               <FaInstagram size={22}/>
+                <FaInstagram size={22} />
               </a>
 
               <a
                 href="#"
                 className="bg-[#10284D] hover:bg-yellow-500 hover:text-black p-4 rounded-full transition"
               >
-                <FaFacebookF size={22}/>
+                <FaFacebookF size={22} />
               </a>
 
             </div>
@@ -128,9 +155,16 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-8 bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3 rounded-full font-bold transition"
             >
-              Book Now
-              <ArrowUpRight size={18}/>
+              Book Zorielle Villa
+              <ArrowUpRight size={18} />
             </a>
+
+            <p className="text-gray-400 text-sm mt-6">
+              Managed by
+              <span className="text-yellow-400">
+                {" "}Zorielle Hospitality
+              </span>
+            </p>
 
           </div>
 
@@ -139,11 +173,11 @@ export default function Footer() {
         <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
 
           <p className="text-gray-400 text-center">
-            © 2026 Zorielle Hospitality. All Rights Reserved.
+            © 2026 Zorielle Villa Udaipur. All Rights Reserved.
           </p>
 
-          <p className="text-gray-500 text-sm">
-            Designed with ❤️ for Luxury Experiences
+          <p className="text-gray-500 text-sm text-center">
+            Managed by Zorielle Hospitality • Luxury Private Pool Villa in Udaipur
           </p>
 
         </div>

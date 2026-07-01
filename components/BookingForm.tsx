@@ -1,48 +1,62 @@
 "use client";
 
 import { useState } from "react";
-import { CalendarDays, Users, Phone, User } from "lucide-react";
+import {
+  CalendarDays,
+  Users,
+  Phone,
+  User,
+  Mail,
+  Clock3,
+  MessageSquare,
+} from "lucide-react";
 
 export default function BookingForm() {
-
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [guests, setGuests] = useState("2");
+  const [arrivalTime, setArrivalTime] = useState("");
+  const [request, setRequest] = useState("");
 
   const bookVilla = () => {
-
     if (!name || !phone || !checkIn || !checkOut) {
-      alert("Please fill all details.");
+      alert("Please fill all required details.");
       return;
     }
 
-    const message = `
-Hello Team Zorielle,
+    const message = `Hello Team Zorielle,
 
 Greetings!
 
 I am interested in booking your Luxury Pool Villa in Udaipur.
 
-Booking Details
+━━━━━━━━━━━━━━
+BOOKING DETAILS
+━━━━━━━━━━━━━━
 
 👤 Name: ${name}
 
 📞 Phone: ${phone}
 
-📅 Check-in Date: ${checkIn}
+📧 Email: ${email || "Not Provided"}
 
-📅 Check-out Date: ${checkOut}
+📅 Check-in: ${checkIn}
 
-👥 Number of Guests: ${guests}
+📅 Check-out: ${checkOut}
+
+👥 Guests: ${guests}
+
+🕒 Expected Arrival: ${arrivalTime || "Not Provided"}
+
+📝 Special Request:
+${request || "None"}
 
 Kindly let me know the availability and booking process.
 
-Looking forward to your response.
-
-Thank you.
-`;
+Thank you.`;
 
     window.open(
       `https://wa.me/918619985400?text=${encodeURIComponent(message)}`,
@@ -55,8 +69,7 @@ Thank you.
       id="booking"
       className="py-24 bg-gradient-to-b from-[#081C3A] to-[#10284D]"
     >
-
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
 
         <div className="glass rounded-3xl p-10 border border-yellow-500/20 shadow-2xl">
 
@@ -75,83 +88,99 @@ Thank you.
           <div className="grid md:grid-cols-2 gap-5">
 
             <div className="relative">
-
-              <User className="absolute left-4 top-4 text-yellow-400" size={20} />
-
+              <User className="absolute left-4 top-4 text-yellow-400" size={20}/>
               <input
                 type="text"
-                placeholder="Full Name"
+                placeholder="Full Name *"
                 value={name}
                 onChange={(e)=>setName(e.target.value)}
-                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 pr-4 py-4 outline-none"
+                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 py-4 outline-none"
               />
-
             </div>
 
             <div className="relative">
-
-              <Phone className="absolute left-4 top-4 text-yellow-400" size={20} />
-
+              <Phone className="absolute left-4 top-4 text-yellow-400" size={20}/>
               <input
                 type="tel"
-                placeholder="Phone Number"
+                placeholder="Phone Number *"
                 value={phone}
                 onChange={(e)=>setPhone(e.target.value)}
-                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 pr-4 py-4 outline-none"
+                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 py-4 outline-none"
               />
+            </div>
 
-            </div>            <div className="relative">
+            <div className="relative">
+              <Mail className="absolute left-4 top-4 text-yellow-400" size={20}/>
+              <input
+                type="email"
+                placeholder="Email Address"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
+                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 py-4 outline-none"
+              />
+            </div>
 
-              <CalendarDays className="absolute left-4 top-4 text-yellow-400" size={20} />
+            <div className="relative">
+              <Users className="absolute left-4 top-4 text-yellow-400" size={20}/>
+              <select
+                value={guests}
+                onChange={(e)=>setGuests(e.target.value)}
+                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 py-4 outline-none"
+              >
+                {[1,2,3,4,5,6,7,8].map((g)=>(
+                  <option key={g} value={g}>
+                    {g} Guest{g>1?"s":""}
+                  </option>
+                ))}
+              </select>
+            </div>
 
+            <div className="relative">
+              <CalendarDays className="absolute left-4 top-4 text-yellow-400" size={20}/>
               <input
                 type="date"
                 value={checkIn}
                 onChange={(e)=>setCheckIn(e.target.value)}
-                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 pr-4 py-4 outline-none"
+                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 py-4 outline-none"
               />
-
             </div>
 
             <div className="relative">
-
-              <CalendarDays className="absolute left-4 top-4 text-yellow-400" size={20} />
-
+              <CalendarDays className="absolute left-4 top-4 text-yellow-400" size={20}/>
               <input
                 type="date"
                 value={checkOut}
                 onChange={(e)=>setCheckOut(e.target.value)}
-                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 pr-4 py-4 outline-none"
+                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 py-4 outline-none"
               />
-
             </div>
 
             <div className="relative md:col-span-2">
+              <Clock3 className="absolute left-4 top-4 text-yellow-400" size={20}/>
+              <input
+                type="time"
+                value={arrivalTime}
+                onChange={(e)=>setArrivalTime(e.target.value)}
+                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 py-4 outline-none"
+              />
+            </div>
 
-              <Users className="absolute left-4 top-4 text-yellow-400" size={20} />
-
-              <select
-                value={guests}
-                onChange={(e)=>setGuests(e.target.value)}
-                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 pr-4 py-4 outline-none"
-              >
-                <option value="1">1 Guest</option>
-                <option value="2">2 Guests</option>
-                <option value="3">3 Guests</option>
-                <option value="4">4 Guests</option>
-                <option value="5">5 Guests</option>
-                <option value="6">6 Guests</option>
-                <option value="7">7 Guests</option>
-                <option value="8">8 Guests</option>
-              </select>
-
+            <div className="relative md:col-span-2">
+              <MessageSquare className="absolute left-4 top-4 text-yellow-400" size={20}/>
+              <textarea
+                rows={5}
+                placeholder="Special Request (Optional)"
+                value={request}
+                onChange={(e)=>setRequest(e.target.value)}
+                className="w-full bg-[#081C3A] border border-white/10 rounded-xl pl-12 pt-4 pb-4 outline-none resize-none"
+              />
             </div>
 
           </div>
 
           <button
             onClick={bookVilla}
-            className="w-full mt-8 bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 rounded-xl transition duration-300"
+            className="w-full mt-8 bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 rounded-xl transition"
           >
             Book on WhatsApp
           </button>
@@ -159,7 +188,6 @@ Thank you.
         </div>
 
       </div>
-
     </section>
   );
 }
