@@ -1,10 +1,5 @@
-"use client";
-
-
-
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import BookingOffers from "@/components/BookingOffers";
 import Stats from "@/components/Stats";
 import BookingBar from "@/components/BookingBar";
 import About from "@/components/About";
@@ -24,17 +19,14 @@ import CallButton from "@/components/CallButton";
 import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
-
   return (
     <main className="bg-black text-white">
 
-  <ScrollProgress />
-      
+      <ScrollProgress />
+
       <Navbar />
 
       <Hero />
-
-      <BookingOffers />
 
       <Stats />
 
@@ -67,6 +59,7 @@ export default function Home() {
       <CallButton />
 
       <ScrollToTop />
+
     </main>
   );
 }

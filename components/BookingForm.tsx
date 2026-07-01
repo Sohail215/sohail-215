@@ -19,24 +19,29 @@ export default function BookingForm() {
     }
 
     const message = `
-🏡 *Zorielle Luxury Villa*
+Hello Team Zorielle,
 
-👤 Name : ${name}
+Greetings!
 
-📞 Phone : ${phone}
+I am interested in booking your Luxury Pool Villa in Udaipur.
 
-📅 Check In : ${checkIn}
+Booking Details
 
-📅 Check Out : ${checkOut}
+👤 Name: ${name}
 
-👥 Guests : ${guests}
+📞 Phone: ${phone}
 
-🏡 Entire Villa Booking
+📅 Check-in Date: ${checkIn}
 
-Weekdays ₹11,999
-Weekends ₹15,999
+📅 Check-out Date: ${checkOut}
 
-I would like to book the villa.
+👥 Number of Guests: ${guests}
+
+Kindly let me know the availability and booking process.
+
+Looking forward to your response.
+
+Thank you.
 `;
 
     window.open(

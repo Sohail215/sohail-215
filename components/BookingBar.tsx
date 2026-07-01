@@ -9,15 +9,16 @@ export default function BookingBar() {
           <div>
 
             <p className="uppercase tracking-[6px] text-yellow-400 mb-3">
-              Ready to Book?
+              Book Your Stay
             </p>
 
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               Experience Luxury Like Never Before
             </h2>
 
-            <p className="text-gray-300 mt-5 text-lg">
-              Private Pool • 3 Luxury Bedrooms • Mountain View • Up to 8 Guests
+            <p className="text-gray-300 mt-5 text-lg leading-8">
+              Enjoy a private luxury villa with a swimming pool, elegant
+              interiors, breathtaking Aravalli views and premium hospitality.
             </p>
 
           </div>
@@ -28,7 +29,7 @@ export default function BookingBar() {
             rel="noopener noreferrer"
             className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-10 py-5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-yellow-500/30"
           >
-            Book on WhatsApp
+            Check Availability
           </a>
 
         </div>

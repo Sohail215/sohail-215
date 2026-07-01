@@ -10,10 +10,21 @@ const images = [
   "/images/exterior view.jpeg",
   "/images/pool.jpeg",
   "/images/g.f. hall.jpeg",
+  "/images/g.f. drawinghall.jpeg",
+  "/images/g.f. hall view 3 .jpeg",
   "/images/room1.jpeg",
   "/images/room2.jpeg",
-  "/images/bedroom.jpeg",
-  "/images/kitchen.jpeg",
+  "/images/drawing-room.jpeg",
+  "/images/balcony.jpeg",
+  "/images/bathroom1.jpeg",
+  "/images/bathroom2.jpeg",
+  "/images/bathroom 3.jpeg",
+  "/images/room2.0.2 .jpeg",
+  "/images/room2.0.3.jpeg",
+  "/images/room10.2.jpeg",
+  "/images/room10.3 .jpeg",
+  "/images/room10.4.jpeg",
+"/images/room10.5.jpeg",
 ];
 
 export default function GallerySection() {
