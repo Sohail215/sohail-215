@@ -1,3 +1,7 @@
+"use client";
+
+
+
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import BookingOffers from "@/components/BookingOffers";
@@ -16,19 +20,22 @@ import VillaHighlights from "@/components/VillaHighlights";
 import ScrollToTop from "@/components/ScrollToTop";
 import TrustSection from "@/components/TrustSection";
 import FAQ from "@/components/FAQ";
-
-
-
+import CallButton from "@/components/CallButton";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
+
   return (
     <main className="bg-black text-white">
+
+  <ScrollProgress />
+      
       <Navbar />
 
       <Hero />
 
       <BookingOffers />
-      
+
       <Stats />
 
       <BookingBar />
@@ -40,7 +47,7 @@ export default function Home() {
       <Amenities />
 
       <Rooms />
-      
+
       <VillaHighlights />
 
       <GallerySection />
@@ -56,6 +63,9 @@ export default function Home() {
       <Footer />
 
       <WhatsAppButton />
+
+      <CallButton />
+
       <ScrollToTop />
     </main>
   );

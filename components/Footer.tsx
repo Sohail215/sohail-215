@@ -5,10 +5,10 @@ import {
   Phone,
   Mail,
   MapPin,
-  Instagram,
-  Facebook,
   ArrowUpRight,
 } from "lucide-react";
+
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -110,14 +110,14 @@ export default function Footer() {
                 href="#"
                 className="bg-[#10284D] hover:bg-yellow-500 hover:text-black p-4 rounded-full transition"
               >
-                <Instagram size={22}/>
+               <FaInstagram size={22}/>
               </a>
 
               <a
                 href="#"
                 className="bg-[#10284D] hover:bg-yellow-500 hover:text-black p-4 rounded-full transition"
               >
-                <Facebook size={22}/>
+                <FaFacebookF size={22}/>
               </a>
 
             </div>
